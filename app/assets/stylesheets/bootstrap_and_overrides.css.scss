@@ -1,3 +1,14 @@
 @import "bootstrap";
-body { padding-top: 60px; }
+
+body { padding-top: 0px; }
+
 @import "bootstrap-responsive";
+
+.hero-unit {
+  padding: 25px;
+}
+#device-list tfoot input,
+#device-list tfoot input:focus {
+  width: 80px;
+}
+

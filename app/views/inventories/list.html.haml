@@ -1,0 +1,8 @@
+.text-left
+  %h3
+    Inventory List
+  %br
+  %div
+    - @inventories.each do |inv|
+      =inv
+      %br/

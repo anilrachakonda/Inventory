@@ -5,6 +5,9 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
+gem 'net-ldap'
+gem 'state_machine'
+gem 'paperclip'
 gem 'jquery-rails'
 gem "mysql2", ">= 0.3.11"
 gem "haml-rails", ">= 0.4"
