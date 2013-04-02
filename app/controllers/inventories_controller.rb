@@ -1,4 +1,6 @@
 class InventoriesController < ApplicationController
+
+  before_filter :login_required
   
   def index
     respond_to do |format|
@@ -7,8 +9,7 @@ class InventoriesController < ApplicationController
   end
   
   def list
-    #@inventories = InventoryList.find(:all)
-    @inventories = ["Device", "Book", "Laptop", "Other Inventories"]
+    @inventories = InventoryList.all.collect(&:name)
     respond_to do |format|
       format.html # list.html.haml 
     end

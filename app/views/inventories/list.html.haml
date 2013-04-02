@@ -2,7 +2,7 @@
   %h3
     Inventory List
   %br
-  %div
-    - @inventories.each do |inv|
-      =inv
-      %br/
+  - @inventories.each do |inv|
+    =radio_button(:name, "inventory_list", inv)
+    =inv
+    %br
