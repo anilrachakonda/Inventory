@@ -3,8 +3,9 @@
     Inventory List
   %br
   .hero-unit
-    %h4
+    %h4{:style => "color: #008080;"}
       Some text comes here
     %div
+      - @inventories = ['Select Inventory'] + @inventories
       = select_tag(:inventory_name, options_for_select(@inventories), :style => 'width:142px;')
     %br
