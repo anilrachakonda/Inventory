@@ -2,7 +2,9 @@
   %h3
     Inventory List
   %br
-  - @inventories.each do |inv|
-    =radio_button(:name, "inventory_list", inv)
-    =inv
+  .hero-unit
+    %h4
+      Some text comes here
+    %div
+      = select_tag(:name, options_for_select(@inventories), :style => 'width:142px;')
     %br
