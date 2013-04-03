@@ -1,8 +1,8 @@
 Inventory::Application.routes.draw do
   authenticated :user do
-    #root :to => 'home#index'
+    root :to => 'home#index'
   end
-  #root :to => "home#index"
+  root :to => "home#index"
   devise_for :users
   resources :users
 
@@ -16,6 +16,6 @@ Inventory::Application.routes.draw do
     end
   end
   
-  resources :sessions
+  #resources :sessions
 
 end

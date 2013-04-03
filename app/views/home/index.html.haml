@@ -1,4 +1,14 @@
-%h3 Home
-- @users.each do |user|
-  %p
-    User: #{link_to user.name, user}
+- if user_signed_in?
+  .text-left
+    %h3
+      Inventory List
+    %br
+    %h4{:style => "color: #008080;"}
+      Some text comes here
+    %div
+      - @inventories = ['Select Inventory'] + @inventories
+      = select_tag(:inventory_name, options_for_select(@inventories), :style => 'width:142px;')
+    %br
+- else
+  %h4{:style => "color: #008080;"}
+    Description of the application comes here. 
